@@ -1,4 +1,4 @@
-let queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=1&latlong=&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT";
+let queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=1&latlong=&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT";
 
 $.ajax({
     type:"GET",
