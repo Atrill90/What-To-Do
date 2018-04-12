@@ -1,0 +1,28 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#content {
+    overflow: auto;
+    height: 100%;
+}
+
+#navbar, #catergories, #footer  {
+    background-color: grey;
+    padding: 10px;
+    margin: 10px;
+}
+
+.column1, .comumn2, .column3 {
+    background-color: gray;
+    width: 300px;
+    float: left;
+    margin: 10px;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+}
+
