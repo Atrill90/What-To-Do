@@ -1,29 +1,45 @@
 
-body {
-    width: 960px;
-    margin: 0 auto;
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
 
-#content {
-    overflow: auto;
-    height: 100%;
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
 }
 
-#navbar, #catergories, #footer  {
-    background-color: grey;
-    padding: 10px;
-    margin: 10px;
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    }
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+/* Instagram */
+.fa-instagram {
+    background: #125688;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
 }
 
-.column1, .comumn2, .column3 {
-    background-color: gray;
-    width: 300px;
-    float: left;
-    margin: 10px;
-}
-
-li {
-    display: inline;
-    padding: 5px;
-}
-
+.content {
+    color: black;
+} 
