@@ -1,5 +1,6 @@
 let queryURL = `https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyApLeLjAqhg5nXoDlvzxKzmdv78-Qqh3F8`;
-var local = "";
+let local = "";
+
 
 // ajax request for users location 
 function getLocation(callback) {

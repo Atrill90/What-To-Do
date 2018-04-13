@@ -1,4 +1,25 @@
-
+.nav-link,h1{
+    font-family:  'Abril Fatface';   
+}
+.aboutContainer{
+    background-color:  rgb(122, 120, 120);
+}
+.eventContainer{
+    font-family:  'Abril Fatface';
+    background: white;
+}
+.mapHolder{
+    background-color: gray;
+}
+.sportsContainer{
+    background-color: lavender;
+}
+.musicContainer{
+    background-color:rgb(212, 203, 206);
+}
+.familyContainer{
+    background-color: rgb(104, 100, 101);
+}
 .fa {
     padding: 20px;
     font-size: 30px;
