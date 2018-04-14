@@ -2,8 +2,8 @@ let queryURL = `https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAp
 let local = "";
 let currentDate = new Date();
 let formattedDate = currentDate.toISOString();
-let dateSubString = formattedDate.substr(0,19) +"Z";
-let locationArr = [];
+let dateSubString = formattedDate.substr(0, 19) + "Z";
+
 
 // let currentYear = currentDate.getFullYear();
 // let getMonth = currentDate.getMonth() + 1;
@@ -26,7 +26,7 @@ function getLocation(callback) {
 
             let latlon = (lattitude + "," + longitude);
             callback(latlon);
-            
+
         },
         error: function (err) {
             console.log(err);
@@ -34,8 +34,8 @@ function getLocation(callback) {
     });
 }
 
-getLocation(function(data){
- let url = `https://cors-anywhere.herokuapp.com/app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
+getLocation(function (data) {
+    let url = `https://cors-anywhere.herokuapp.com/app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
     $.ajax({
         type: "GET",
         url: url,
@@ -43,16 +43,18 @@ getLocation(function(data){
         dataType: "json",
         success: function (json) {
             // console.log(json);
-           let eventLocations = json._embedded.events;
-        //    console.log(eventLocations);
-           let locationCoordinates = eventLocations.map(function(location){
-              return  location._embedded.venues[0].location;
-           }).map(element => {
-               return [element.longitude,element.latitude];
-        
-           });
-           console.log(locationCoordinates);
-           mapMarkerMaker(locationCoordinates);
+            let eventLocations = json._embedded.events;
+            //    console.log(eventLocations);
+            let locationCoordinates = eventLocations.map(function (location) {
+                return location._embedded.venues[0].location;
+            }).map(function(coordinate){
+                return {
+                    lat:parseFloat(coordinate.latitude),
+                    lng:parseFloat(coordinate.longitude)
+                }
+            });
+            
+            mapMarkerMaker(locationCoordinates, data);
         },
         error: function (xhr, status, err) {
             // This time, we do not end up here!
@@ -60,11 +62,37 @@ getLocation(function(data){
     });
 })
 
-function mapMarkerMaker(coordinates){
+function mapMarkerMaker(locations, data) {
+   
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 3,
+        center: {
+            lat: 28.556559300000004,
+            lng: -81.20229549999999
+        }
+    });
+    // Create an array of alphabetical characters used to label the markers.
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // Add some markers to the map.
+    // Note: The code uses the JavaScript Array.prototype.map() method to
+    // create an array of markers based on a given "locations" array.
+    // The map() method here has nothing to do with the Google Maps API.
+    console.log(locations);
+    var markers = locations.map(function (location, i) {
+        return new google.maps.Marker({
+            position:location,
+            label: labels[i % labels.length]
+        });
+    });
+
+    // Add a marker clusterer to manage the markers.
+    var markerCluster = new MarkerClusterer(map, markers, {
+        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+    });
+
+
+
+
+
 
 }
-
-
-
-
-
