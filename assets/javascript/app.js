@@ -4,15 +4,12 @@ let currentDate = new Date();
 let formattedDate = currentDate.toISOString();
 let dateSubString = formattedDate.substr(0, 19) + "Z";
 
-
 // let currentYear = currentDate.getFullYear();
 // let getMonth = currentDate.getMonth() + 1;
 // let getDay = currentDate.getDate();
 // // let formattedDate = `${currentYear}-0${getMonth}-${getDay}`;
 // let readableDate= currentDate.toDateString();
 // console.log(readableDate);
-
-
 
 // ajax request for users location 
 function getLocation(callback) {
@@ -21,9 +18,7 @@ function getLocation(callback) {
         method: "POST",
         success: function (response) {
             let lattitude = response.location.lat;
-
             let longitude = response.location.lng;
-
             let latlon = (lattitude + "," + longitude);
             callback(latlon);
 
@@ -95,4 +90,6 @@ function mapMarkerMaker(locations, data) {
 
 
 
+
 }
+
