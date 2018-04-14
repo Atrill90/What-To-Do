@@ -3,12 +3,14 @@ let local = "";
 let currentDate = new Date();
 let formattedDate = currentDate.toISOString();
 let dateSubString = formattedDate.substr(0, 19) + "Z";
+
 // let currentYear = currentDate.getFullYear();
 // let getMonth = currentDate.getMonth() + 1;
 // let getDay = currentDate.getDate();
 // // let formattedDate = `${currentYear}-0${getMonth}-${getDay}`;
 // let readableDate= currentDate.toDateString();
 // console.log(readableDate);
+
 // ajax request for users location 
 function getLocation(callback) {
     $.ajax({
@@ -19,12 +21,14 @@ function getLocation(callback) {
             let longitude = response.location.lng;
             let latlon = (lattitude + "," + longitude);
             callback(latlon);
+
         },
         error: function (err) {
             console.log(err);
         }
     });
 }
+
 getLocation(function (data) {
     let url = `https://cors-anywhere.herokuapp.com/app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
     $.ajax({
@@ -52,6 +56,7 @@ getLocation(function (data) {
         }
     });
 })
+
 function mapMarkerMaker(locations, data) {
    
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -74,8 +79,17 @@ function mapMarkerMaker(locations, data) {
             label: labels[i % labels.length]
         });
     });
+
     // Add a marker clusterer to manage the markers.
     var markerCluster = new MarkerClusterer(map, markers, {
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
+
+
+
+
+
+
+
 }
+
