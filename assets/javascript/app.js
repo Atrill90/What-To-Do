@@ -3,8 +3,7 @@ let local = "";
 let currentDate = new Date();
 let formattedDate = currentDate.toISOString();
 let dateSubString = formattedDate.substr(0,19) +"Z";
-console.log(dateSubString);
-
+let locationArr = [];
 
 // let currentYear = currentDate.getFullYear();
 // let getMonth = currentDate.getMonth() + 1;
@@ -27,7 +26,7 @@ function getLocation(callback) {
 
             let latlon = (lattitude + "," + longitude);
             callback(latlon);
-            console.log(latlon);
+            
         },
         error: function (err) {
             console.log(err);
@@ -37,22 +36,33 @@ function getLocation(callback) {
 
 getLocation(function(data){
  let url = `https://cors-anywhere.herokuapp.com/app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
-    console.log(url);
     $.ajax({
         type: "GET",
         url: url,
         async: true,
         dataType: "json",
         success: function (json) {
-            console.log(json);
-            // Parse the response.
-            // Do other things.
+            // console.log(json);
+           let eventLocations = json._embedded.events;
+        //    console.log(eventLocations);
+           let locationCoordinates = eventLocations.map(function(location){
+              return  location._embedded.venues[0].location;
+           }).map(element => {
+               return [element.longitude,element.latitude];
+        
+           });
+           console.log(locationCoordinates);
+           mapMarkerMaker(locationCoordinates);
         },
         error: function (xhr, status, err) {
             // This time, we do not end up here!
         }
     });
 })
+
+function mapMarkerMaker(coordinates){
+
+}
 
 
 
