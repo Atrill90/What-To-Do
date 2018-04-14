@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>What-To-Do</title>
   <meta charset="utf-8">
@@ -11,12 +10,10 @@
   <link rel="stylesheet" href="assets/css/bootswatch.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">What-To-Do</a>
-
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -30,13 +27,10 @@
       </li>
     </ul>
   </nav>
-
-
   <div class="container-fluid">
     <h3></h3>
     <p></p>
   </div>
-
   <div class="container-fluid">
     <h1 class="text-center"> Wondering what to do? Well here's What-To-Do.</h1>
     <br>
@@ -46,17 +40,6 @@
         <br>
         <div id="map" style="width:100%;height:400px;">
         </div>
-        <script>
-          function myMap() {
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {
-              center: new google.maps.LatLng(51.5, -0.2),
-              zoom: 10
-            };
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-          }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP0BETKJ8OCOV1cYdsIH-3f8pa1U12sPM&callback=myMap"></script>
         <br>
         <br>
         <form>
@@ -77,7 +60,6 @@
                   <li></li>
                 </li>
           </label>
-
         </div>
         <br>
         <br>
@@ -89,6 +71,7 @@
       <div class="container-fluid">
         <div class="row">
           <!-- The three main column for the catogories -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <div class="col-sm-12 mb-2 text-center eventContainer">Events</div>
           <div class="col-sm-3 mr-2 sportsContainer">
             <button type="button">Sports</button>
@@ -105,7 +88,7 @@
               atque facere sequi modi eligendi ab nobis quae pariatur nostrum obcaecati, possimus sit, quam tempora.</p>
           </div>
           <div class="col-sm-3 mr-2 familyContainer">
-            <button type="button">Family</button>
+            <button type="button">Misc.</button>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa voluptates recusandae adipisci doloribus numquam
               eius possimus vero voluptas. Odio esse tempora libero, cum reiciendis consequuntur nulla eius corrupti quos
               voluptate!
@@ -118,7 +101,11 @@
   </div>
 </body>
 <!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+ <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP0BETKJ8OCOV1cYdsIH-3f8pa1U12sPM&callback=mapMarkerMaker">
+</script> 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -126,6 +113,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/test.js"></script>
 </body>
-
 </html>
