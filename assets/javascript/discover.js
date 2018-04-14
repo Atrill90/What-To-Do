@@ -6,6 +6,11 @@ let dateSubString = formattedDate.substr(0, 19) + "Z";
 
 
 // Event Listeners
+// Place these at the very top
+// All AJAX call functions grouped together after
+// Helper functions after
+
+
 
 $("button").on("click", function(e){
   console.log(e.target);
