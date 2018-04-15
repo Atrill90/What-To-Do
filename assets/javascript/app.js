@@ -3,6 +3,7 @@ let local = "";
 let currentDate = new Date();
 let formattedDate = currentDate.toISOString();
 let dateSubString = formattedDate.substr(0, 19) + "Z";
+
 // ajax request for users location 
 function getLocation(callback) {
     $.ajax({
@@ -10,9 +11,7 @@ function getLocation(callback) {
         method: "POST",
         success: function (response) {
             let lattitude = response.location.lat;
-
             let longitude = response.location.lng;
-
             let latlon = (lattitude + "," + longitude);
             callback(latlon);
 
@@ -88,4 +87,6 @@ function mapMarkerMaker(eventLocations,data) {
 
 
 
+
 }
+
