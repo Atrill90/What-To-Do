@@ -1,0 +1,65 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              <script>
+              $(document).ready(function(){
+                  $("sportsBox").click(function(){
+                      $(musicBox).hide();
+                      $(miscBox).hide();
+                      
+                  });
+                  $("musicBox").click(function(){
+                      $(sportsBox).hide();
+                      $(miscBox).hide();
+                  });
+                  $("#miscBox").click(function(){
+                      $(sportsBox).hide();
+                      $(musicBox).hide();
+                  });
+              });
+              
+              </script>
+
+
+          <div class="col-sm-12 mb-2" class="text-center" style="font-family: 'Abril Fatface', cursive;" style="background: rgb(156, 186, 196)">Events</div>
+          <div class="col-sm-3 mr-2" id="sportsBox" style="background-color:lavender;">
+
+              <button id="hide">Sports</button>
+ 
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur tempore repellendus libero atque minus error
+              corrupti non. Eligendi quo iusto obcaecati, sapiente quae cumque ut adipisci neque, incidunt in nisi.</p>
+            <form>
+              <br>
+              <br>
+            </form>
+          </div>
+        
+          <div class="col-sm-3 mr-2" id="musicBox" style="background-color:rgb(212, 203, 206);">
+            <button id="hide1">Music</button>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum deleniti beatae veniam ipsa voluptatum assumenda
+              atque facere sequi modi eligendi ab nobis quae pariatur nostrum obcaecati, possimus sit, quam tempora.</p>
+          
+          </div>
+          <div class="col-sm-3 mr-2" id="miscBox" style="background-color:rgb(104, 100, 101);">
+            <button id="hide2">Misc</button>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa voluptates recusandae adipisci doloribus numquam
+              eius possimus vero voluptas. Odio esse tempora libero, cum reiciendis consequuntur nulla eius corrupti quos
+              voluptate!</p>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

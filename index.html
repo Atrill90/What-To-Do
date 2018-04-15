@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootswatch.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -45,9 +46,8 @@
             </form>
         </div>
         <div class="col-sm-6 aboutContainer"><h2><u>About</u></h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure eaque explicabo ex ipsum eius sapiente earum
-            minus. Excepturi dicta suscipit dolores, commodi maxime temporibus soluta nostrum inventore asperiores esse?</p>
-        <div class="form-group">
+         
+        <div class="form-group text-left">
             <label for="usr">
                 <li></li>
                 <li></li>
@@ -55,87 +55,37 @@
                 <li></li>
             </label>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      
         </b>
     </div>
     <div class="container-fluid">
         <div class="row text-center">
         <!-- The three main column for the catogories -->
-            <div class="col-sm-12 mb-2 text-center eventContainer">
-                Events
-            </div><br>
-                <div class="sportsContainerLARGE">
-                    <br>
-                    <br>
-                    <h5><u>Sports</u></h5>
-                    <p>blah blah blah Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur tempore repellendus libero atque minus error 
-                    corrupti non. Eligendi quo iusto obcaecati, sapiente quae cumque ut adipisci neque, incidunt in nisi.</p>
-                    <button type="button" id="sportButton">Return</button>
-                    <br>
-                    <br>
-                </div>
-                <div class="musicContainerLARGE">
-                        <br>
-                        <br>
-                        <h5><u>Sports</u></h5>
-                        <p>blah blah blah Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur tempore repellendus libero atque minus error 
-                        corrupti non. Eligendi quo iusto obcaecati, sapiente quae cumque ut adipisci neque, incidunt in nisi.</p>
-                        <button type="button" id="musicButton">Return</button>
-                        <br>
-                        <br>
-                </div>
-                <div class="familyContainerLARGE">
-                        <br>
-                        <br>
-                        <h5><u>Misc.</u></h5>
-                        <p>blah blah blah rem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur tempore repellendus libero atque minus error 
-                        corrupti non. Eligendi quo iusto obcaecati, sapiente quae cumque ut adipisci neque, incidunt in nisi.</p>
-                        <button type="button" id="familyButton">Return</button>
-                        <br>
-                        <br>
-                </div>
-                <div class="row main-container text-center"></div>
-                    <div class="col-sm-3 mr-2 sportsContainer">
-                        <br>
-                        <h5><u>Sports</u></h5>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur tempore repellendus libero atque minus error 
-                            corrupti non. Eligendi quo iusto obcaecati, sapiente quae cumque ut adipisci neque, incidunt in nisi.</p>
-                        <button type="button" id="sportButton">see more</button>
-                        <br>
-                        <br>
-                    </div>
-                    <div class="col-sm-3 mr-2 musicContainer">
-                        <br>
-                        <h5><u>Music</u></h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum deleniti beatae veniam ipsa voluptatum assumenda 
-                            atque facere sequi modi eligendi ab nobis quae pariatur nostrum obcaecati, possimus sit, quam tempora.</p>
-                        <button type="button" id="musicButton">see more</button>
-                        <br>
-                        <br>
-                    </div>
-                    <div class="col-sm-3 mr-2 familyContainer">
-                        <br>
-                        <h5><u>Misc.</u></h5>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa voluptates recusandae adipisci doloribus numquam 
-                        eius possimus vero voluptas. Odio esse tempora libero, cum reiciendis consequuntur nulla eius corrupti quos 
-                        voluptate!</p>
-                        <button type="button" id="familyButton">See more</button>
-                        <br>
-                        <br>
-
+            <div class="col-sm-12 text-center eventContainer">
+                <u>Events</u>
+                <div class="container">
+                  
+                        <table class="table text-left">
+                          <thead>
+                            <tr>
+                              <th>Image</th> 
+                              <th>Event Name</th>
+                              <th>Venue</th>
+                              <th>Dates</th>
+                              <th>Time</th>
+                            </tr>
+                          </thead>
+                       
+                        </table>
+                      </div>
+           
                         
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
     </div>
 </body>
 <!-- Optional JavaScript -->
-
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP0BETKJ8OCOV1cYdsIH-3f8pa1U12sPM&callback=mapMarkerMaker"></script>
