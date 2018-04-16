@@ -56,14 +56,20 @@ function eventList(eventLocations,data) {
             // console.log(eventVenue);
             let eventDate = new Date(eventLocations[i].dates.start.dateTime);
             // console.log(eventDate);
+            let eventLink = eventLocations[i].url;
+            console.log("This is the event url: " + eventLink);
+            
 
             let eventRow = $("<tr>");
-            eventRow.addClass("newEventRow")
+            let eventL= $("<a>");
+            eventL.attr("href",eventLink);
+            eventRow.addClass("newEventRow");
             let eventN = $("<td nameData>");
             eventN.text(eventName);
             let eventImg = $("<img img-fluid >");
+            eventImg.appendTo(eventL);
             eventImg.attr("src", eventImage);
-            eventImg.addClass("imageData")
+            eventImg.addClass("imageData");
             // console.log("Event img" + eventImg);
             let eventI = $("<td imageHolder>");
             // console.log("This is img url"+ eventI);
