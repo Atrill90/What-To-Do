@@ -3,6 +3,41 @@
     font-family: cursive;
        
 }
+
+.divFooterMain {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: right;
+}
+@media print {
+    div.divFooterMain {
+      position: absolute;
+      bottom: 0;
+
+    }
+  
+}
+
+  .divFooter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+@media print {
+    div.divFooter {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+
 .aboutContainer{
     background-color:  gray;
     font-family:  'Abril Fatface';
@@ -33,6 +68,35 @@
     text-align: center;
     text-decoration: none;
 }
+#face {
+    font-size: 15px;
+    width: 40px;
+    text-align: right;
+    text-decoration: none;
+}
+
+#twit {
+    font-size: 15px;
+    width: 40px;
+    text-align: right;
+    text-decoration: none;
+}
+
+#insta{
+    font-size: 15px;
+    width: 40px;
+    text-align: right;
+    text-decoration: none;
+}
+
+#follow {
+    color:gray;
+    text-decoration: underline;
+}
+
+.contact1 {
+    margin-left: 650px; 
+}
 /* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
@@ -62,6 +126,7 @@
     height: 30px;
     margin: 5px;
 }
+
 .content {
     color: black;
 } 
