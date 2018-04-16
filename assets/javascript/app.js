@@ -58,10 +58,12 @@ function eventList(eventLocations,data) {
             // console.log(eventDate);
 
             let eventRow = $("<tr>");
+            eventRow.addClass("newEventRow")
             let eventN = $("<td nameData>");
             eventN.text(eventName);
-            let eventImg = $("<img imageData>");
+            let eventImg = $("<img img-fluid >");
             eventImg.attr("src", eventImage);
+            eventImg.addClass("imageData")
             // console.log("Event img" + eventImg);
             let eventI = $("<td imageHolder>");
             // console.log("This is img url"+ eventI);
@@ -129,13 +131,8 @@ function mapMarkerMaker(eventLocations, data) {
                 });
                 marker.addListener('click', function () {
                     infowindow.open(map, marker);
-                });
-            
-           
+                });   
         });
-        
-        
-
     });
 
 

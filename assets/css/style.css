@@ -1,7 +1,5 @@
 .nav-link,h1{
-    font-family:  'Abril Fatface';
-    font-family: cursive;
-       
+    font-family:  'Abril Fatface';  
 }
 .aboutContainer{
     background-color:  gray;
@@ -70,4 +68,8 @@
 }
 #table {
     font-size: 10px
+}
+.imageData{
+max-width: 250px;
+max-height: 250px;
 }
