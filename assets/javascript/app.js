@@ -80,7 +80,7 @@ function eventList(eventLocations,data) {
             let eventV = $("<td venueData>");
             eventV.text(eventVenue);
             let saveEventButton = $("<button>");
-            saveEventButton.addClass("btn btn-primary btn-sm");
+            saveEventButton.addClass("btn btn-info btn-sm");
             saveEventButton.addClass("tickEven");
             saveEventButton.attr("href",eventLink);
             saveEventButton.text("Save My Event");
@@ -186,6 +186,8 @@ function mapMarkerMaker(eventLocations, data) {
 }
 $(document).on("click",'.tickEven', function(event){
     event.preventDefault();
-    console.log(event.target);
     window.open($(this).attr("href"), "popupWindow", "width=600,height=600,scrollbars=yes");
+    imageGrabber =  $(this).parent('').closest('<img>').appendTo('aboutContainer');
+    console.log(this);
+
 });

@@ -138,3 +138,7 @@
 max-width: 250px;
 max-height: 250px;
 }
+.newEventRow{
+    background-color: black;
+    color: white;
+}
