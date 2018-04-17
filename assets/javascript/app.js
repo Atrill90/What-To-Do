@@ -81,10 +81,10 @@ function eventList(eventLocations,data) {
             let eventV = $("<td venueData>");
             eventV.text(eventVenue);
             let saveEventButton = $("<button>");
-            saveEventButton.addClass("btn btn-info btn-sm");
+            saveEventButton.addClass("btn btn-info btn-md");
             saveEventButton.addClass("tickEven");
             saveEventButton.attr("href",eventLink);
-            saveEventButton.text("Save My Event");
+            saveEventButton.text("Grab Me A Seat");
             let eventB = $("<td eventButton>");
             eventB.append(saveEventButton);
             
@@ -190,5 +190,6 @@ $(document).on("click",'.tickEven', function(event){
     window.open($(this).attr("href"), "popupWindow", "width=600,height=600,scrollbars=yes");
      let imageGrabber = $(this).parents('.newEventRow').find('img').clone('img');
     imageGrabber.appendTo(".aboutContainer");
+
 
 });
