@@ -23,7 +23,8 @@ function getLocation(callback) {
 }
 
 getLocation(function (data) {
-    let url = `https://cors-anywhere.herokuapp.com/app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
+    let url = `https://app.ticketmaster.com/discovery/v2/events.json?size=10&startDateTime=${dateSubString}&latlong=${data}&radius=30&unit=miles&apikey=nEMd0Ed2sNkvX2uizZwdCDIiuArIDwnT`;
+    //cors-anywhere.herokuapp.com/
     $.ajax({
         type: "GET",
         url: url,
@@ -90,7 +91,7 @@ function eventList(eventLocations,data) {
           
             
             
-            eventRow.append(eventB, eventI, eventN, eventV, eventD);
+            eventRow.append(eventI, eventB, eventN, eventV, eventD);
             $(".eventRow").append(eventRow);
            
             
@@ -187,7 +188,7 @@ function mapMarkerMaker(eventLocations, data) {
 $(document).on("click",'.tickEven', function(event){
     event.preventDefault();
     window.open($(this).attr("href"), "popupWindow", "width=600,height=600,scrollbars=yes");
-    imageGrabber =  $(this).parent('').closest('<img>').appendTo('aboutContainer');
-    console.log(this);
+     let imageGrabber = $(this).parents('.newEventRow').find('img').clone('img');
+    imageGrabber.appendTo(".aboutContainer");
 
 });
