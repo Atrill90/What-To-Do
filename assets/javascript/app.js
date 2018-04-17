@@ -186,9 +186,11 @@ function mapMarkerMaker(eventLocations, data) {
 
 }
 $(document).on("click",'.tickEven', function(event){
+    $(".aboutContainer").empty();
     event.preventDefault();
     window.open($(this).attr("href"), "popupWindow", "width=600,height=600,scrollbars=yes");
      let imageGrabber = $(this).parents('.newEventRow').find('img').clone('img');
+     imageGrabber.addClass("clonedImage");
     imageGrabber.appendTo(".aboutContainer");
 
 

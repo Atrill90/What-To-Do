@@ -154,3 +154,10 @@ max-height: 250px;
     background-image: url("http://bgfons.com/uploads/aluminum/aluminum_texture1642.jpg");
     background-size: cover;
 }
+
+.clonedImage {
+    max-height: 500px;
+    max-width: 500px;
+    justify-content: center;
+    margin-top: 22px;
+}
