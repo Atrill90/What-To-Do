@@ -1,5 +1,11 @@
+body {
+    background-image: url("http://bgfons.com/uploads/aluminum/aluminum_texture1642.jpg");
+    background-size: cover;
+}
+
+
 .nav-link,h1{
-    font-family:  'Abril Fatface';  
+    font-family: 'Abel', sans-serif;
 }
 
 .divFooterMain {
@@ -37,12 +43,12 @@
   }
 
 .aboutContainer{
-    background-color:  gray;
-    font-family:  'Abril Fatface';
+    background-color: #EAF1F1;
+    font-family: 'Abel', sans-serif;
     color: black;
 }
 .eventContainer{
-    font-family:  'Abril Fatface';
+    font-family: 'Abel', sans-serif;
     background:white;
     align-items: center;
     color: black;
@@ -50,7 +56,7 @@
  
 }
 .mapHolder{
-    background-color: gray;
+    background-color: #EAF1F1;
 }
 .col-centered{
     float: none;
@@ -139,6 +145,11 @@ max-width: 250px;
 max-height: 250px;
 }
 .newEventRow{
-    background-color: black;
-    color: white;
+    background-color: #EAF1F1;
+    color: rgb(17, 16, 16);
+}
+
+.eventContainer {
+    background-image: url("http://bgfons.com/uploads/aluminum/aluminum_texture1642.jpg");
+    background-size: cover;
 }
