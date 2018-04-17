@@ -82,6 +82,8 @@ function eventList(eventLocations,data) {
             // console.log(eventVenue);
             let eventDate = new Date(eventLocations[i].dates.start.dateTime);
             // console.log(eventDate);
+            let eventURL = eventLocations[i].url;
+            console.log("This is the event url: " + eventURL);
 
             let eventRow = $("<tr>");
             let eventN = $("<td nameData>");

@@ -51,23 +51,24 @@ function eventList(eventLocations,data) {
             let eventName = JSON.stringify(eventLocations[i].name);
             // console.log(eventName);
             let eventImage = eventLocations[i].images[i].url;
-             console.log(eventImage);
+            //  console.log(eventImage);
             let eventVenue = eventLocations[i]._embedded.venues[0].name;
             // console.log(eventVenue);
             let eventDate = new Date(eventLocations[i].dates.start.dateTime);
             // console.log(eventDate);
             let eventLink = eventLocations[i].url;
-            console.log("This is the event url: " + eventLink);
+            // console.log("This is the event url: " + eventLink);
+            let eventInfo = eventLocations[i].info;
+            // console.log("Event info " + eventInfo);
+           
+    
             
 
-            let eventRow = $("<tr>");
-            let eventL= $("<a>");
-            eventL.attr("href",eventLink);
+            let eventRow = $("<tr>");           
             eventRow.addClass("newEventRow");
             let eventN = $("<td nameData>");
             eventN.text(eventName);
             let eventImg = $("<img img-fluid >");
-            eventImg.appendTo(eventL);
             eventImg.attr("src", eventImage);
             eventImg.addClass("imageData");
             // console.log("Event img" + eventImg);
@@ -79,16 +80,31 @@ function eventList(eventLocations,data) {
             eventD.text(eventDate);
             let eventV = $("<td venueData>");
             eventV.text(eventVenue);
+            let saveEventButton = $("<button>");
+            saveEventButton.addClass("btn btn-primary btn-sm");
+            saveEventButton.addClass("tickEven");
+            saveEventButton.attr("src");
+            saveEventButton.text("Save My Event");
+            let eventL= $("<a>");
+            eventL.attr("href");
+            saveEventButton.appendTo(eventL);
+            let eventB = $("<td eventButton>");
+            eventB.append(saveEventButton);
+          
             
-            eventRow.append(eventI, eventN, eventV, eventD);
+            
+            eventRow.append(eventB, eventI, eventN, eventV, eventD);
             $(".eventRow").append(eventRow);
            
-
+         
+            
 
         }
     
 
 }
+
+
 
 function mapMarkerMaker(eventLocations, data) {
     let locationCoordinates = eventLocations.map(function (location) {
@@ -171,3 +187,6 @@ function mapMarkerMaker(eventLocations, data) {
 
 
 }
+$(document).on("click",'.tickEven', function(e){
+    console.log(e.target);
+});
