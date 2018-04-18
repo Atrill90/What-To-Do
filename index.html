@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-  <title>What-To-Do</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/bootswatch.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <title>What-To-Do</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootswatch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand/logo -->
@@ -26,31 +29,32 @@
         </ul>
         <div class="container-fluid text-center text-md-left">
             <div class="row">
-    
+
                 <!--First column-->
                 <div class="contact1">
-                    <div align= "right">
-                    <h5 id="follow">Follow us Here</h5>
-                       
-                        <a href="https://www.facebook.com/whattodo.gogitters/" id ="face" class="fa fa-facebook"></a>
-                        <a href="https://twitter.com/WhatToDo12345" id= "twit" class="fa fa-twitter"></a>
-                        <a href="https://www.instagram.com/whattodo.gogitters/" id= "insta" class="fa fa-instagram"></a>
+                    <div align="right">
+                        <h5 id="follow">Follow us Here</h5>
+
+                        <a href="https://www.facebook.com/whattodo.gogitters/" id="face" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/WhatToDo12345" id="twit" class="fa fa-twitter"></a>
+                        <a href="https://www.instagram.com/whattodo.gogitters/" id="insta" class="fa fa-instagram"></a>
                     </div>
-                </div>   
-                </div>
-    
-                <!--Second column-->
-                        <div align= "right">
-                    <div class="list-unstyled">
-                 </div>
                 </div>
             </div>
-                <!--/.Second column-->
+
+            <!--Second column-->
+            <div align="right">
+                <div class="list-unstyled">
+                </div>
             </div>
+        </div>
+        <!--/.Second column-->
+        </div>
     </nav>
     <br>
     <div class="container-fluid"></div>
-    <div class="container-fluid text-center "><h1></h1>
+    <div class="container-fluid text-center ">
+        <h1></h1>
         <br>
         <!-- Google map -->
         <div class="row">
@@ -59,56 +63,63 @@
                 <div id="map" style="width:100%;height:400px;"></div>
                 <br>
                 <br>
-            <form>
-                <div class="form-row">
-                <div class="col"></div>
+                <form>
+                    <div class="form-row">
+                        <div class="col"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6 aboutContainer">
+                <h2>
+                    <u></u>
+                </h2>
+
+
+                </b>
+            </div>
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <!-- The three main column for the catogories -->
+                    <div class="col-sm-12 text-center eventContainer">
+                        <u>Events</u>
+                        <div class="container">
+
+                            <table class="table text-left">
+                                <thead>
+                                    <tr class="eventRow">
+                                        <!-- <th class= "eventImage">Image</th>  -->
+                                        <!-- <th class= "eventName">Event Name</th> -->
+                                        <!-- <th class= "eventVenue">Venue</th> -->
+                                        <!-- <th class= "eventDate">Dates</th> -->
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </div>
+
+
+                    </div>
                 </div>
-            </form>
-        </div>
-        <div class="col-sm-6 aboutContainer"><h2><u></u></h2>
-         
-      
-        </b>
-    </div>
-    <div class="container-fluid">
-        <div class="row text-center">
-        <!-- The three main column for the catogories -->
-            <div class="col-sm-12 text-center eventContainer">
-                <u>Events</u>
-                <div class="container">
-                  
-                        <table class="table text-left">
-                          <thead>
-                            <tr class= "eventRow">
-                              <!-- <th class= "eventImage">Image</th>  -->
-                              <!-- <th class= "eventName">Event Name</th> -->
-                              <!-- <th class= "eventVenue">Venue</th> -->
-                              <!-- <th class= "eventDate">Dates</th> -->
-                            </tr>
-                          </thead>
-                       
-                        </table>
-                      </div>
-           
-                        
             </div>
-            </div>
-        </div>
-    
 
 
 
-           
-        </body>
+
+
+</body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP0BETKJ8OCOV1cYdsIH-3f8pa1U12sPM&callback=mapMarkerMaker"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 <script src="assets/javascript/app.js"></script>
 <script src="assets/javascript/buttons.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
+
 </html>
