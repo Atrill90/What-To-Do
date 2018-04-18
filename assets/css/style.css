@@ -161,3 +161,15 @@ max-height: 250px;
     justify-content: center;
     margin-top: 22px;
 }
+
+.aboutUs {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.itsUs {
+    width: 460px;
+    height: 345;
+    
+}
